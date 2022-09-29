@@ -58,14 +58,14 @@ def updater():
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
-    msg = await message.reply("🔄 `تتم البرمجه بواسطة سورس ايثون......`")
+    msg = await message.reply("🔄 `تتم البرمجه بواسطة سورس ويلسون......`")
     update_avail = updater()
     if update_avail:
         await msg.edit("✅ update finished\n\n• bot restarted, back active again in 1 minutes.")
         system("git pull -f && pip3 install --no-cache-dir -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
-    await msg.edit(f"تم الترقية بواسطه سورس [Ξ𝗜𝗧𝗛𝗢𝗡™ ايثون](https://t.me/EITHON1)", disable_web_page_preview=True)
+    await msg.edit(f"تم الترقية بواسطه سورس [ويلسون 𓄂ᬽ𝐃𝐄𝐕 𝐖𝐄𝑳𝐒𝐎𝐍𓆃](https://t.me/DEV_WELSON)", disable_web_page_preview=True)
 
 
 @Client.on_message(command(["ريستارت", f"restart@{BOT_USERNAME}"]) & ~filters.edited)
